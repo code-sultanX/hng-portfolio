@@ -16,6 +16,11 @@ ul {
   list-style: none;
 }
 /* this is a comment some expalan */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -98,7 +103,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media screen and (min-width: 512px) {
+@media (max-width: 512px) {
   .date-time {
     flex-direction: row;
   }
