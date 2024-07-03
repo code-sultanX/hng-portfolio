@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="Project.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <!-- <img class="toppic"  src="images/Freelance.jpeg"> -->
+        <div class="Logo">Hassan</div>
+      </div>
+
+      <div class="date-time">
+        <p data-testid="currentDay" id="day">Tuesday</p>
+        <p data-testid="currentTime" id="time">13:29:53</p>
+      </div>
+     </nav>
+
+    <div class="profile-img">
+      <img class="name" src="Images/image.png" />
+    </div>
+
+    <div class="text-section">
+      <h1>Hello HNG, I'm Hassan.</h1>
+
+      <p>
+        A Frontend intern at the reputable HNG program and willing to
+        collaborate with even minds and acheive great things while I ham here.
+      </p>
+      <p>
+        I’m a frontend developer in the learning space looking to broaden my
+        skillset and incorporate acquired problem solving skills to approach
+        disparate tasks in a scalable and more efficient manner. Through
+        expertise and structured assessment pattern, HNG assesses through
+        projects that helps improve self development through continual learning
+        and working towards fixated timed deadlines.
+      </p>
+    </div>
+
+    <footer class="myfooter">
+      <ul>
+        <h2>Contact</h2>
+        <li data-testid="SlackName">Hassan Akinola</li>
+        <li data-testid="SlackEmail">
+          <a href="mailto:thehassanakinola@gmail.com">Gmail</a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/hassan-akinola-2bb7332b6/?lipi=urn%3Ali%3Apage%3Aprofile_common_profile_index%3Bf5c5f94d-6dbe-4fef-bac0-6f268e1b73fa"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="https://github.com/code-sultanX/">Github</a></li>
+      </ul>
+
+      <ul>
+        <h3>Other links</h3>
+        <li data-testid="http://hng.tech/learn.Attribute:">HNG link</li>
+        <li data-testid="http://keyword.dogAttribute">Keyword link</li>
+        <li data-testid="http://scrapeanyweb.siteAttribute">
+          scrapeanyweblink
+        </li>
+      </ul>
+    </footer>
+    <script>
+      const daysOfWeek = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const dayTag = document.getElementById("day");
+      const timeTag = document.getElementById("time");
+
+      setInterval(() => {
+        const date = new Date();
+
+        let H = date.getHours();
+        let M = date.getMinutes();
+        let S = date.getSeconds();
+
+        timeTag.textContent = `${H}:${M}:${S}`;
+
+        dayTag.textContent = daysOfWeek[date.getDay()];
+      }, 1000);
+    </script>
+  </body>
+</html>
