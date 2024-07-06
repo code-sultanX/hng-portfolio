@@ -8,17 +8,17 @@
   </head>
   <body>
     <div class="nav">
-         <nav>
-      <div class="left">
-        <!-- <img class="toppic"  src="images/Freelance.jpeg"> -->
-        <div class="Logo">Hassan</div>
-      </div>
+      <nav>
+        <div class="left">
+          <!-- <img class="toppic"  src="images/Freelance.jpeg"> -->
+          <div class="Logo">Hassan</div>
+        </div>
 
-      <div class="date-time">
-        <p data-testid="currentDay" id="day">Tuesday</p>
-        <p data-testid="currentTime" id="time">13:29:53</p>
-      </div>
-     </nav>
+        <div class="date-time">
+          <p data-testid="currentDay" id="day">Tuesday</p>
+          <p data-testid="currentTime" id="time">13:29:53</p>
+        </div>
+      </nav>
     </div>
     <div class="profile-img">
       <img class="name" src="Images/image.png" />
@@ -29,7 +29,7 @@
 
       <p>
         A Frontend intern at the reputable HNG program and willing to
-        collaborate with even minds and acheive great things while I ham here.
+        collaborate with even minds and acheive great things while I am here.
       </p>
       <p>
         I’m a frontend developer in the learning space looking to broaden my
@@ -37,14 +37,19 @@
         disparate tasks in a scalable and more efficient manner. Through
         expertise and structured assessment pattern, HNG assesses through
         projects that helps improve self development through continual learning
-        and working towards fixated timed deadlines.
+        and working towards fixated timed deadlines. I'd develop in some key
+        areas like my ability to identify common problems and provide feasible
+        solutions. Examples are issues of day to day dealings and how to unravel
+        the bottlenecks surrounding them. By identifying these grey areas, it
+        equips me with the motivational drive to learn technologies useful
+        towards acheiving these feats. The journey of a thousand codes begins with just that first line. Hence, I envisage to develop myself from time to time, year to year and one technology at a time.
       </p>
     </div>
 
     <footer class="myfooter">
       <ul>
         <h2>Contact</h2>
-        <li data-testid="SlackName">Hassan Akinola</li>
+        <li data-testid="SlackName" id="smth" class="nth">Hassan Akinola</li>
         <li data-testid="SlackEmail">
           <a href="mailto:thehassanakinola@gmail.com">Gmail</a>
         </li>
@@ -59,10 +64,14 @@
 
       <ul>
         <h3>Other links</h3>
-        <li data-testid="http://hng.tech/learn.Attribute:"><a href="http://hng.tech/learn.Attribute">HNG.tech</a></li>
-        <li data-testid="http://keyword.dogAttribute"><a href="http://keyword.dogAttribute">Keyword.dogAttribute</a></li>
-        <li data-testid="http://scrapeanyweb.siteAttribute"><a href="http://scrapeanyweb.siteAttribute">Scrapeanyweblink</a>
-          
+        <li data-testid="http://hng.tech/learn.Attribute:">
+          <a href="http://hng.tech/learn">HNG.tech</a>
+        </li>
+        <li data-testid="http://keyword.dogAttribute">
+          <a href="https://keyword.dog">Keyword.dogAttribute</a>
+        </li>
+        <li data-testid="https://scrapeanyweb.site">
+          <a href="https://scrapeanyweb.site">Scrapeanyweblink</a>
         </li>
       </ul>
     </footer>
@@ -79,14 +88,30 @@
       const dayTag = document.getElementById("day");
       const timeTag = document.getElementById("time");
 
+      // document.getElementById("smth")
+      // document.getElementsByClassName("nth")
+      const smth = document.querySelector("#smth");
+      const nth = document.querySelector(".nth");
+      const div = document.querySelectorAll("div");
+
+      // console.log(new Date().getDay());
+      // console.log(daysOfWeek[new Date().getDay()]);
+
+      // setInterval(function () {
+      //   const date = new Date();
+      //   let time = date.getSeconds();
+      //   console.log(time);
+      // }, 1000);
+
       setInterval(() => {
         const date = new Date();
-
         let H = date.getHours();
         let M = date.getMinutes();
         let S = date.getSeconds();
+        const timeString = H + ":" + M + ":" + S;
 
-        timeTag.textContent = `${H}:${M}:${S}`;
+        // timeTag.textContent = `${H}:${M}:${S}`;
+        timeTag.textContent = timeString;
 
         dayTag.textContent = daysOfWeek[date.getDay()];
       }, 1000);
